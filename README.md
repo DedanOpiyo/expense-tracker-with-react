@@ -6,7 +6,7 @@ A lightweight and responsive React-based expense tracker that allows users to ad
 
 ## Live Demo
 
-👉 [Click here to view the live app](https://your-deployment-url.vercel.app)
+👉 [Click here to view the live app](https://expense-tracker-with-react-eight.vercel.app/)
 
 ---
 
