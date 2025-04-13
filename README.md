@@ -1,25 +1,25 @@
-# 💸 Expense Tracker
+# Expense Tracker
 
 A lightweight and responsive React-based expense tracker that allows users to add expenses, search/filter them in real time,view, and search through their spending all in one clean interface.
 
 ---
 
-## 🚀 Live Demo
+## Live Demo
 
 👉 [Click here to view the live app](https://your-deployment-url.vercel.app)
 
 ---
 
-## 📋 Features
+## Features
 
-- ✅ Add expenses using a simple form
-- 🔍 Filter/search expenses in real time
-- 📊 Display expenses in a clean, styled table
-- ⚛️ React component-based architecture with props and state management
-- ⚡️ Built using Vite for fast dev experience
+- Add expenses using a simple form
+- Filter/search expenses in real time
+- Display expenses in a clean, styled table
+- React component-based architecture with props and state management
+- Built using Vite for fast dev experience
 ---
 
-## 🧠 How It Works
+## How It Works
 
 1. **App.jsx** holds the main state for `expenses`.
 2. **ExpenseForm.jsx** allows users to add new expenses. On submission:
@@ -32,7 +32,7 @@ A lightweight and responsive React-based expense tracker that allows users to ad
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - React
 - Vite
@@ -41,9 +41,9 @@ A lightweight and responsive React-based expense tracker that allows users to ad
 
 ---
 
-## 🔧 How to Use
+## How to Use
 
-1. Clone the repo:
+Clone the repo:
 
    ```bash
    git clone https://github.com/yourusername/expense-tracker-app.git
@@ -63,12 +63,14 @@ Visit http://localhost:5173 to view the app.
 
 ```
 
+-**To configure Tailwind css:* follow instructions at: https://tailwindcss.com/docs/installation/using-vite
+
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
-   ```bash
+
 expense-tracker/
 ├── public/
 ├── src/
@@ -91,7 +93,7 @@ expense-tracker/
 ```
 
 
-## 🧩 Component Code (Mock example)
+## Component Code (Mock example)
 
    ```bash
 // SearchExpense.jsx 
@@ -127,7 +129,7 @@ export default function searchExpense({expenses}) {
 ```
 
 export default SearchExpense;
-### ✉️ Contact
+### Contact
 
 Have feedback, suggestions, or want to collaborate?
 
@@ -136,5 +138,5 @@ Have feedback, suggestions, or want to collaborate?
 > **LinkedIn:** [Dedan Opiyo]
 
 
-### 📄 License
+### License
 This project is open source and available under the MIT License.

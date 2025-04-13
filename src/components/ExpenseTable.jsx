@@ -3,10 +3,8 @@ import React from 'react';
 export default function ExpenseTable({expenses, onlyFoundExpenses}) {
 
   const validOnlyFoundExpenses = onlyFoundExpenses.length > 0 && onlyFoundExpenses.some(expense => expense && Object.keys(expense).length > 0);
-  console.log('validOnlyFoundExpenses:', validOnlyFoundExpenses)
 
   const displayedExpenses = validOnlyFoundExpenses ? onlyFoundExpenses : expenses;
-  console.log('DISPLAYEDEXPENSES', displayedExpenses[0])
 
   return (
       <div className="w-full">

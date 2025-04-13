@@ -10,7 +10,6 @@ export default function ExpenseForm() {
     const [date, setDate] = useState("");
 
     const [expenses, setExpenses] = useState([]);
-    console.log('expenses beore handleSubmission function:', expenses) // Log Current user expenses.
 
     function handleSubmission(e) {
         e.preventDefault();
@@ -33,7 +32,6 @@ export default function ExpenseForm() {
         
         // Set expenses by pushing the newExpense object.
         setExpenses([...expenses, newExpense]);
-        console.log('expenses:', expenses) // Log Initial user expenses.
 
         // Clear input fields
         setExpense("");

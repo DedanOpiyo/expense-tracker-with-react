@@ -3,12 +3,10 @@ import { useState } from 'react';
 import ExpenseTable from './ExpenseTable';
 
 export default function searchExpense({expenses}) {
-  console.log('expenses in searchExpense:', expenses)
 
   const [searchTerm, setSearchTerm] = useState("");
 
   const foundExpensesArray = expenses.filter((expense) => expense.expenseCategory.includes(searchTerm) || expense.expenseDescription.includes(searchTerm));
-  console.log('FILTERED foundExpenses array', foundExpensesArray)
 
   return (
     <div className='flex flex-col gap-1'>    
@@ -26,4 +24,4 @@ export default function searchExpense({expenses}) {
       <ExpenseTable expenses={expenses} onlyFoundExpenses={foundExpensesArray}/>
     </div>
   )
-}
+};
