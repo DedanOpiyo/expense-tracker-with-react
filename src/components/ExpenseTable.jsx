@@ -21,7 +21,7 @@ export default function ExpenseTable({expenses, onlyFoundExpenses, sortExpenses,
               <th onClick={()=> sortExpenses('expenseCategory')}>Category</th>
               <th>Amount (Ksh)</th>
               <th>Date</th>
-              <th>Delete</th>
+              {displayExpenses.length > 0 ?<th>Delete</th>: <th style={{display: 'none'}}>Delete</th>}
             </tr>
           </thead>
           <tbody>
