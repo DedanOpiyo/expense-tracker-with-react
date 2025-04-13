@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .expense-form > *:not(:last-child):not(#expenseCategory) {
+    @apply border border-[grey] m-[.1em] rounded-md p-2;
+  }
+}
+
+.table-cells th,
+.table-cells td {
+  @apply px-2 py-1 border border-gray-200 text-left;
+}
