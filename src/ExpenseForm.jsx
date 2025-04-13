@@ -8,7 +8,7 @@ export default function ExpenseForm() {
     const [expenseCategory, setExpenseCategory] = useState("");
     const [amount, setAmount] = useState("");
     const [date, setDate] = useState("");
-
+    
     const [expenses, setExpenses] = useState([]);
 
     function handleSubmission(e) {
@@ -30,7 +30,7 @@ export default function ExpenseForm() {
 
         console.log('newExpense Object:', newExpense)
         
-        // Set expenses by pushing the newExpense object.
+        // Update expenses with the newExpense object when the form is submitted. 'Spread out' or copy existing expenses first.
         setExpenses([...expenses, newExpense]);
 
         // Clear input fields
@@ -40,6 +40,19 @@ export default function ExpenseForm() {
         setAmount("")
         setDate("")
     }
+
+    // Sort expenses alphabetically by category or description.
+    function sortExpenses(columnToSort) {
+        console.log('columnToSort IN SEARCH EXPENSEFORM----:', columnToSort)
+        const sortedExpenses = [...expenses].sort((a,b) => a[columnToSort].localeCompare(b[columnToSort]))
+        setExpenses(sortedExpenses)
+        console.log('sortedExpenses IN EXPENSEFORM IS------:', sortedExpenses)
+    }
+
+    // Function to delete expense.    
+    const deleteExpense = (index) => {
+        setExpenses(expenses.filter((_, ind) => ind !== index));
+    };
 
     return (
     <div id="expenseTracker" className="flex flex-col gap-1 mt-2 ml-2 mr-2">
@@ -72,7 +85,7 @@ export default function ExpenseForm() {
             </div>
 
             <div className="w-4/5 flex flex-col gap-1">
-                <SearchExpense expenses={expenses}/>
+                <SearchExpense expenses={expenses} sortExpensesFunc={sortExpenses} deleteExpenseFunc={deleteExpense}/>
             </div>
         </div>
     </div>

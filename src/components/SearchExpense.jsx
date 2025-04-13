@@ -2,11 +2,11 @@ import React from 'react';
 import { useState } from 'react';
 import ExpenseTable from './ExpenseTable';
 
-export default function searchExpense({expenses}) {
+export default function searchExpense({expenses, sortExpensesFunc, deleteExpenseFunc}) {
 
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState(""); // State updated on input change.
 
-  const foundExpensesArray = expenses.filter((expense) => expense.expenseCategory.includes(searchTerm) || expense.expenseDescription.includes(searchTerm));
+  const foundExpensesArray = expenses.filter((expense) => expense.expenseCategory.includes(searchTerm) || expense.expenseDescription.includes(searchTerm)); // Using searchTerm, filter expenses.
 
   return (
     <div className='flex flex-col gap-1'>    
@@ -21,7 +21,7 @@ export default function searchExpense({expenses}) {
           </div>
       </form>
 
-      <ExpenseTable expenses={expenses} onlyFoundExpenses={foundExpensesArray}/>
+      <ExpenseTable expenses={expenses} onlyFoundExpenses={foundExpensesArray} sortExpenses={sortExpensesFunc} deleteExpense={deleteExpenseFunc}/>
     </div>
   )
 };
